@@ -1,10 +1,15 @@
 from flask import Flask
 
+from FakerData.FakerDataBlue import faker
+
 app = Flask(__name__)
+
+# app注册蓝图
+app.register_blueprint(faker)
 
 
 @app.route('/')
-def hello_world():
+def homepage():
     return 'Hello World!'
 
 
