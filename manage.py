@@ -1,11 +1,16 @@
 from flask import Flask
+from flask_cors import *
 
+from Menu.MenuBlue import menu
 from FakerData.FakerDataBlue import faker
 
 app = Flask(__name__)
 
+CORS(app, supports_credentials=True)
+
 # app注册蓝图
-app.register_blueprint(faker)
+app.register_blueprint(menu, url_prefix='/api/v1')
+app.register_blueprint(faker, url_prefix='/api/v1')
 
 
 @app.route('/')
