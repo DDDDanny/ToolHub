@@ -5,7 +5,8 @@
 # @describe: 菜单数据逻辑处理
 
 
-def menu_list():
+# FakerData Menu
+def menu_faker_list():
     menu_data = {
         'nodeName': 'FakerData',
         'iconName': 'mdi-alpha-f-box',
@@ -36,6 +37,23 @@ def menu_list():
                 'iconName': 'mdi-cards-heart',
                 'path': '/faker/other',
             },
+        ]
+    }
+    return menu_data
+
+
+# AboutMe Menu
+def menu_about_list():
+    menu_data = {
+        'nodeName': 'About',
+        'iconName': 'mdi-information',
+        'path': None,
+        'children': [
+            {
+                'nodeName': '关于我 (AboutMe)',
+                'iconName': 'mdi-emoticon-lol-outline',
+                'path': '/about/me',
+            }
         ]
     }
     return menu_data
