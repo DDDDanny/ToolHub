@@ -50,7 +50,12 @@ def menu_about_list():
         'path': None,
         'children': [
             {
-                'nodeName': '关于我 (AboutMe)',
+                'nodeName': 'About ToolHub',
+                'iconName': 'mdi-thought-bubble-outline',
+                'path': '/about/toolHub',
+            },
+            {
+                'nodeName': 'About Me',
                 'iconName': 'mdi-emoticon-lol-outline',
                 'path': '/about/me',
             }
