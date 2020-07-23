@@ -12,9 +12,9 @@ from FakerData.FakerData import FakerData
 faker = Blueprint('faker', __name__)
 
 
-@faker.route('/faker/list', methods=['GET'])
+@faker.route('/faker/list/base', methods=['GET'])
 def get_faker_list():
-    data = FakerData().faker_random_list()
+    data = FakerData().faker_data_list_base()
     return Common.success_json(data)
 
 
