@@ -20,15 +20,13 @@ def get_faker_list():
 
 @faker.route('/faker/random', methods=['POST'])
 def faker_random_data():
-    faker_type = request.form.get('type')
-    lang = request.form.get('lang')
-    if faker_type == '1' or faker_type == '2':
-        if lang is None or lang == 'zh_CN':
-            data = FakerData().faker_random(int(faker_type))
-        elif lang == 'en_US':
-            data = FakerData('en_US').faker_random(int(faker_type))
-        else:
-            return Common.fail_json()
-        return Common.success_json(data)
-    else:
+    form_data = eval(request.get_data(as_text=True))
+    print(form_data)
+    faker_cat = form_data['cat']
+    print(faker_cat)
+    attr = form_data['attr']
+    if faker_cat == '' or attr == '':
         return Common.fail_json()
+    else:
+        res = FakerData().faker_random(faker_cat, attr)
+        return Common.success_json(res)
