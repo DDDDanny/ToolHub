@@ -25,6 +25,10 @@ def faker_random_data():
     faker_cat = form_data['cat']
     print(faker_cat)
     attr = form_data['attr']
+    # faker_cat = request.form.get('cat')
+    # attr = request.form.get('attr')
+    # attr = eval(attr)
+
     if faker_cat == '' or attr == '':
         return Common.fail_json()
     else:
