@@ -20,7 +20,7 @@ class FakerData(object):
         self.faker_list = [
             {"id": 100, "catName": "姓名"},
             {"id": 101, "catName": "地址"},
-            {"id": 102, "catName": "颜色"},
+            {"id": 102, "catName": "手机号"},
             {"id": 103, "catName": "车牌号"},
             {"id": 104, "catName": "公司名称"},
         ]
@@ -53,4 +53,10 @@ class FakerData(object):
             print(address_list)
             for address in address_list:
                 res += address
+        # 生成假电话号码
+        elif faker_id == '102':
+            if attr['prefix'] == '':
+                res = self.faker_obj.phone_number()
+            else:
+                res = attr['prefix'] + self.faker_obj.phone_number()[3:]
         return {'result': res}
