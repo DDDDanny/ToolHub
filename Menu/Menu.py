@@ -27,7 +27,7 @@ def menu_faker_list():
     return menu_data
 
 
-# AboutMe Menu
+# About Menu
 def menu_about_list():
     menu_data = {
         'nodeName': 'About',
@@ -43,6 +43,28 @@ def menu_about_list():
                 'nodeName': 'About Me',
                 'iconName': 'mdi-emoticon-lol-outline',
                 'path': '/about/me',
+            }
+        ]
+    }
+    return menu_data
+
+
+# SecretCode Menu
+def menu_secret_list():
+    menu_data = {
+        'nodeName': 'SecretCode',
+        'iconName': 'mdi-shield-key',
+        'path': None,
+        'children': [
+            {
+                'nodeName': '数据加密',
+                'iconName': 'mdi-lock',
+                'path': '/secretCode/encrypt',
+            },
+            {
+                'nodeName': '数据解密',
+                'iconName': 'mdi-lock-open-variant',
+                'path': '/secretCode/decrypt',
             }
         ]
     }

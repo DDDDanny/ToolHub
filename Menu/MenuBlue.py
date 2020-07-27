@@ -7,7 +7,7 @@
 from flask import Blueprint
 
 from Common.ReCommon import Common
-from Menu.Menu import menu_faker_list, menu_about_list
+from Menu.Menu import menu_faker_list, menu_about_list, menu_secret_list
 
 
 menu = Blueprint('menu', __name__)
@@ -18,6 +18,8 @@ def get_menu_list():
     data = list()
     # FakerData菜单
     data.append(menu_faker_list())
+    # Encrypt&Decrypt菜单
+    data.append(menu_secret_list())
     # About菜单
     data.append(menu_about_list())
     return Common.success_json(data)
