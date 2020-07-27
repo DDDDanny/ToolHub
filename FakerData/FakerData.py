@@ -25,7 +25,7 @@ class FakerData(object):
             {"id": 101, "catName": "地址"},
             {"id": 102, "catName": "手机号"},
             {"id": 103, "catName": "日期时间"},
-            {"id": 104, "catName": "公司名称"},
+            {"id": 104, "catName": "更多"},
         ]
         return self.faker_list
 
