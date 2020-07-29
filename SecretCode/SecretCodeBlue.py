@@ -19,10 +19,6 @@ def code_encrypt():
     cate = form_data['cate']
     wait_str = form_data['waitStr']
     salt = form_data['salt']
-    # cate = request.form.get('cate')
-    # wait_str = request.form.get('waitStr')
-    # print(type(wait_str))
-    # salt = request.form.get('salt')
 
     if cate == '' or wait_str == '':
         return Common.fail_json()
