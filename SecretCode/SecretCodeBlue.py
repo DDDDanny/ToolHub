@@ -14,15 +14,15 @@ secretCode = Blueprint('secretCode', __name__)
 
 @secretCode.route('/secretCode/goEncrypt', methods=['POST'])
 def code_encrypt():
-    # form_data = eval(request.get_data(as_text=True))
-    # print(form_data)
-    # cate = form_data['cate']
-    # wait_str = form_data['waitStr']
-    # salt = form_data['salt']
-    cate = request.form.get('cate')
-    wait_str = request.form.get('waitStr')
-    print(type(wait_str))
-    salt = request.form.get('salt')
+    form_data = eval(request.get_data(as_text=True))
+    print(form_data)
+    cate = form_data['cate']
+    wait_str = form_data['waitStr']
+    salt = form_data['salt']
+    # cate = request.form.get('cate')
+    # wait_str = request.form.get('waitStr')
+    # print(type(wait_str))
+    # salt = request.form.get('salt')
 
     if cate == '' or wait_str == '':
         return Common.fail_json()
