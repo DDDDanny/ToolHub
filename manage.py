@@ -3,6 +3,7 @@ from flask_cors import *
 
 from Menu.MenuBlue import menu
 from FakerData.FakerDataBlue import faker
+from SecretCode.SecretCodeBlue import secretCode
 
 app = Flask(__name__)
 
@@ -11,6 +12,7 @@ CORS(app, supports_credentials=True)
 # app注册蓝图
 app.register_blueprint(menu, url_prefix='/api/v1')
 app.register_blueprint(faker, url_prefix='/api/v1')
+app.register_blueprint(secretCode, url_prefix='/api/v1')
 
 
 @app.route('/')
