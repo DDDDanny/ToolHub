@@ -20,13 +20,16 @@ class Decrypt(object):
 
 # 处理数据解密业务
 def go_decrypt(cate, wait_str):
-    init_obj = Decrypt(wait_str)
-    # cate=1: Base64;
-    if cate == '1':
-        res = init_obj.base64_code()
-    else:
-        raise {'result': '加密类型选择错误'}
-    return {'result': res}
+    try:
+        init_obj = Decrypt(wait_str)
+        # cate=1: Base64;
+        if cate == '1':
+            res = init_obj.base64_code()
+        else:
+            return {'result': '加密类型选择错误'}
+        return {'result': res}
+    except Exception as e:
+        return {'result': '加密错误：{}'.format(e)}
 
 
 if __name__ == '__main__':
