@@ -12,14 +12,14 @@ class Decrypt(object):
         self.waiting_str = wait_str
 
     # Base64编码
-    def base64_code(self):
+    def base64_code(self) -> str:
         new_str = self.waiting_str.encode('utf-8')  # 需要转成bytes字节符
         new_str = base64.b64decode(new_str)
         return new_str.decode()
 
 
 # 处理数据解密业务
-def go_decrypt(cate, wait_str):
+def go_decrypt(cate, wait_str) -> dict:
     try:
         init_obj = Decrypt(wait_str)
         # cate=1: Base64;

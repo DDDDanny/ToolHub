@@ -19,7 +19,7 @@ class FakerData(object):
             self.faker_obj = Faker("en_US")
 
     # 获取FakerList（Base）
-    def faker_data_list_base(self):
+    def faker_data_list_base(self) -> list:
         self.faker_list = [
             {"id": 100, "catName": "姓名"},
             {"id": 101, "catName": "地址"},
@@ -30,7 +30,7 @@ class FakerData(object):
         return self.faker_list
 
     # 实现FakerData
-    def faker_random(self, faker_id, attr):
+    def faker_random(self, faker_id, attr) -> dict:
         # res 用于存储假数据生成的结果
         res = ''
         # 生成随机姓名

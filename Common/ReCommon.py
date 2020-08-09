@@ -9,7 +9,7 @@ from flask import jsonify
 
 class Common:
     @staticmethod
-    def success_json(data, msg="请求成功"):
+    def success_json(data, msg="请求成功") -> object:
         return jsonify({
             "data": data,
             "meta": {
@@ -19,7 +19,7 @@ class Common:
         })
 
     @staticmethod
-    def fail_json(msg="参数错误"):
+    def fail_json(msg="参数错误") -> object:
         return jsonify({
             "data": 0,
             "meta": {

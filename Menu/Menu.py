@@ -6,7 +6,7 @@
 
 
 # FakerData Menu
-def menu_faker_list():
+def menu_faker_list() -> dict:
     menu_data = {
         'nodeName': 'FakerData',
         'iconName': 'mdi-alpha-f-box',
@@ -28,7 +28,7 @@ def menu_faker_list():
 
 
 # About Menu
-def menu_about_list():
+def menu_about_list() -> dict:
     menu_data = {
         'nodeName': 'About',
         'iconName': 'mdi-information',
@@ -50,7 +50,7 @@ def menu_about_list():
 
 
 # SecretCode Menu
-def menu_secret_list():
+def menu_secret_list() -> dict:
     menu_data = {
         'nodeName': 'SecretCode',
         'iconName': 'mdi-shield-key',
