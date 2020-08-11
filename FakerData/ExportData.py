@@ -18,6 +18,14 @@ def create_workbook(param_list: list):
     else:
         for i in range(param_list.__len__()):
             sheet.write(0, i, param_list[i])
+            if param_list[i] == '姓名':
+                pass
+            elif param_list[i] == '性别':
+                pass
+            elif param_list[i] == '电话':
+                pass
+            else:
+                pass
     book.close()
     return fp
 
