@@ -8,7 +8,7 @@ from flask import Blueprint, request
 
 from Common.ReCommon import Common
 from FakerData.FakerData import FakerData
-from FakerData.ExportData import download
+from FakerData.ExportData import ExportData
 
 faker = Blueprint('faker', __name__)
 
@@ -41,6 +41,4 @@ def faker_random_data():
 def faker_export_data():
     param_list = request.args.get('paramsList').split(',')
     data_num = request.args.get('dataNum')
-    print(param_list)
-    print(data_num)
-    return download(param_list)
+    return ExportData().download(param_list, data_num)
