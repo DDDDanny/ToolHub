@@ -69,3 +69,20 @@ def menu_secret_list() -> dict:
         ]
     }
     return menu_data
+
+
+# Calculate Menu
+def menu_calculate_list() -> dict:
+    menu_data = {
+        'nodeName': 'Calculate',
+        'iconName': 'mdi-chip',
+        'path': None,
+        'children': [
+            {
+                'nodeName': '计算实付款',
+                'iconName': 'mdi-currency-cny',
+                'path': '/calculate/realPayment'
+            },
+        ]
+    }
+    return menu_data
