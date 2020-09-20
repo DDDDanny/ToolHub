@@ -15,13 +15,11 @@ class FormatJson(object):
     def format_json(json_str: str) -> dict:
         length = json_str.__len__()
         if length > 50000:
-            return {'result': 'Json数据过长'}
-        special_key = ['\n', '\r', '\t']
-
-        new_json = json_str
-        if any(key in json_str for key in special_key):
-            new_json = json_str.replace('\n', '').replace('\r', '').replace('\t', '')
-        mk_dict = eval(new_json)
+            return {'result': 'Json数据超过50000个字符，长度过长，请重新输入。。。😉'}
+        try:
+            mk_dict = json.loads(json_str)
+        except Exception:
+            return {'result': '输入的非Json格式的字符串，无法格式化！😑'}
         res = json.dumps(mk_dict, sort_keys=False, indent=4, separators=(',', ': '), ensure_ascii=False)
         return {'result': res}
 
