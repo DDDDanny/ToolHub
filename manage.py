@@ -5,6 +5,7 @@ from Menu.MenuBlue import menu
 from FakerData.FakerDataBlue import faker
 from SecretCode.SecretCodeBlue import secretCode
 from Calculate.CalculateBlue import calc
+from FormatInfo.FormatInfoBlue import formatInfo
 
 app = Flask(__name__)
 
@@ -15,6 +16,7 @@ app.register_blueprint(menu, url_prefix='/api/v1')
 app.register_blueprint(faker, url_prefix='/api/v1')
 app.register_blueprint(secretCode, url_prefix='/api/v1')
 app.register_blueprint(calc, url_prefix='/api/v1')
+app.register_blueprint(formatInfo, url_prefix='/api/v1')
 
 
 @app.route('/')

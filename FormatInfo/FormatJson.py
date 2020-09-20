@@ -12,10 +12,10 @@ class FormatJson(object):
         pass
 
     @staticmethod
-    def format_json(json_str: str):
+    def format_json(json_str: str) -> dict:
         length = json_str.__len__()
         if length > 50000:
-            return {'result': 'Json数据过长，无法处理'}
+            return {'result': 'Json数据过长'}
         special_key = ['\n', '\r', '\t']
 
         new_json = json_str
