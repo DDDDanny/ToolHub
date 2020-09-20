@@ -86,3 +86,20 @@ def menu_calculate_list() -> dict:
         ]
     }
     return menu_data
+
+
+# Format Menu
+def menu_format_list() -> dict:
+    menu_data = {
+        'nodeName': 'Format',
+        'iconName': 'mdi-format-paint',
+        'path': None,
+        'children': [
+            {
+                'nodeName': '格式化Json',
+                'iconName': 'mdi-format-list-text',
+                'path': '/format/json'
+            }
+        ]
+    }
+    return menu_data
