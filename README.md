@@ -1,6 +1,6 @@
 # ToolHub
 
-WebSite URL: [ToolHub](https://toolhub.mintblue.top/)
+WebSite: [ToolHub](https://toolhub.mintblue.top/)
   
 [![Sourcegraph](https://badgen.net/github/commits/DDDDanny/ToolHub)](https://badgen.net/github/commits/DDDDanny/ToolHub)
 [![Sourcegraph](https://badgen.net/github/status/DDDDanny/ToolHub)](https://badgen.net/github/status/DDDDanny/ToolHub)  
